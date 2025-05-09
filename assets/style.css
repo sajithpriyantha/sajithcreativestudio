@@ -1,0 +1,852 @@
+style.css
+                    /* STRAT side bra eka kotaswalata bedagenima */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+
+
+  /* Custom styles for responsive layout */
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+/* Mobile styles */
+@media (max-width: 767.98px) {
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+    
+    .content-wrapper {
+        margin-left: 0;
+    }
+    
+    .mobile-navbar {
+        display: block !important; /* Show mobile navbar */
+    }
+    
+    /* Add top padding for mobile content to account for navbar */
+    .content-wrapper .container {
+        padding-top: 70px;
+    }
+}
+
+/* Hide mobile navbar by default for desktop/tablet */
+.mobile-navbar {
+    display: none !important;
+}
+
+/* Icon and text styles */
+.sidebar .nav-link {
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    background-color: #212529;
+}
+
+.mobile-menu .nav-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.mobile-menu .nav-link i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+
+    
+
+
+
+
+
+
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link span {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link i {
+    transition: transform 0.3s ease;
+}
+
+.nav-link.active i {
+    transform: scale(1.2);
+}
+
+.nav-link.active span {
+    opacity: 1;
+}
+
+/* Add smooth transition for icons and text */
+.nav-link:hover i {
+    transform: scale(1.2);
+}
+
+.nav-link:hover span {
+    opacity: 1;
+}
+
+/*navigeshan bar madata ganima*/
+.d-flex.flex-column.flex-shrink-0.bg-dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;    /* Centers content horizontally */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6.5rem;
+}
+
+/* Move logo to top */
+/* .d-flex.justify-content-center.align-items-center.w-100.py-3 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* Style the navigation container */
+.nav.flex-column.text-center.w-100 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;          /* Adds space between navigation items */
+  margin: 0;          /* Removes default margin */
+  padding: 0;         /* Removes default padding */
+}
+
+/* Style individual navigation items */
+.nav-link {
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for navigation items */
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Style for the tooltip text */
+.nav-link span {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+/* Show tooltip on hover */
+.nav-link:hover span {
+  opacity: 1;
+}
+/*  */
+
+
+#home {
+  position: relative;
+  background-image: url('../assets/image/home.jpg'); /* ඔබේ පින්තූරය */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Text visibility වැඩි කිරීම */
+  padding: 100px 0; /* Extra spacing */
+}
+
+/* Overlay එක */
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #02010ed5; /* Transparent Overlay */
+  z-index: 1; /* Overlay එක text ටිකට පසුපසින් තබා ගැනීම */
+}
+
+/* Text content එක Overlay මතුපිටට ගැනීම */
+#home .text-center {
+  position: relative;
+  z-index: 2; /* Text එක Overlay එක මතුපිට පෙන්වීම */
+}
+
+#about { background-color: #02010e; }
+#services { background-color: #02010e; }
+#portfolio { background-color: #02010e; }
+#contact { background-color:  #02010e; }
+
+/* Optional: Active link styles */
+.nav-link.active {
+  background-color: #02010e;  /* Dark background for active link */
+  color: white;  /* White text for active link */
+}
+
+
+
+
+
+                              /* END side bra eka kotaswalata bedagenima */
+
+
+                              /* STRAT said bar eke vachana atharat irak ekthukirima*/
+.nav-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 239, 239, 0.2); /* Bottom border for all */
+}
+
+.nav li:first-child .nav-link {
+  border-top: 1px solid rgba(211, 191, 191, 0.2); /* Top border for first item */
+}
+
+.nav li:last-child .nav-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Bottom border for last item */
+}
+/* end said bar eke vachana atharat irak ekthukirima*/
+
+  /* STRAT said bar eke vachana zoom */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+                            /* END said bar eke vachana zoom */
+  
+  
+
+
+
+.welcome-text {
+  font-size: 1.1rem; /* Standard font size */
+  font-weight: 400;
+  line-height: 1.8; /* Better line spacing */
+  color: #ffffff; /* Professional text color */
+  text-align: center; /* Justifies text for balanced alignment */
+  text-justify: inter-word; /* Improved word spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Controls text width for better readability */
+}
+
+/* Smaller font size for the last line */
+.welcome-text em {
+  color: #b1b1b1;
+  font-size: 1rem; /* Reduced font size */
+  font-weight: 300; /* Lighter weight for subtle emphasis */
+  display: block;
+  text-align: center; /* Keeps it centered */
+  
+}
+
+/* h1 animateshan STRAT */
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 1px rgb(117, 253, 90);
+  }
+  50% {
+      text-shadow: 0 0 10px rgb(117, 253, 90);
+  }
+  100% {
+      text-shadow: 0 0 1px rgb(117, 253, 90);
+  }
+}
+
+h1 {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+/* h1 animateshan END */
+
+
+.zoom-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-button:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Zoom effect on hover submint button */
+.btn-warning {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-warning:hover {
+  transform: scale(1.05);
+}
+
+/* Click animation */
+.btn-warning:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+                      /* START about icon styles */
+.logos-grid {
+  width: 100%;
+  max-width: 450px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  /*background: rgba(0, 0, 0, 0.6);*/
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Auto Play Staggered Animation */
+.logo-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.7;
+  animation: playEffect 3s infinite ease-in-out alternate;
+}
+
+/* Delay each logo animation */
+.logo-item:nth-child(1) img { animation-delay: 0s; }
+.logo-item:nth-child(2) img { animation-delay: 0.3s; }
+.logo-item:nth-child(3) img { animation-delay: 0.6s; }
+.logo-item:nth-child(4) img { animation-delay: 0.9s; }
+.logo-item:nth-child(5) img { animation-delay: 1.2s; }
+.logo-item:nth-child(6) img { animation-delay: 1.5s; }
+.logo-item:nth-child(7) img { animation-delay: 1.8s; }
+.logo-item:nth-child(8) img { animation-delay: 2.1s; }
+.logo-item:nth-child(9) img { animation-delay: 2.4s; }
+.logo-item:nth-child(10) img { animation-delay: 2.7s; }
+.logo-item:nth-child(1) img { animation-delay: 3.0s; }
+
+/* Play Animation Keyframes */
+@keyframes playEffect {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive - Mobile Devices */
+@media (max-width: 768px) {
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+                      /* END about icon styles */
+
+
+
+
+        
+                        /* STRAT footer styles */
+
+ /* STRAT social mediya icon styles */
+
+.social-icons-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  flex-wrap: wrap; /* Allow wrapping to multiple lines */
+  background-color: transparent;
+}
+
+
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(68, 68, 68, 0.986);
+}
+
+.social-icon {
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  border-radius: 50px;
+  background-color: transparent; /* Make icon background transparent (if needed) */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Tablets and smaller */
+  .social-icon {
+      width: 60px;
+      height: 60px;
+  }
+}
+
+@media (max-width: 576px) { /* Mobile */
+  .social-icon {
+      width: 50px;
+      height: 50px;
+      margin: 5px; /* Reduce margin on smaller screens */
+  }
+}
+
+
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.822); /* Adjust 0.5 for desired transparency */
+}
+
+
+
+ /* END social mediya icon styles */
+                    /* end footer styles */
+
+
+                    /* STRAT gallry Full-screen Modal Styling */
+
+/* Gallery grid layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.gallery-item {
+  width: 200px;
+  height: 220px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Full-screen Modal Styling */
+.fullscreen-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.fullscreen-content {
+  max-width: 90%;
+  max-height: 90vh;
+  margin-top: 2%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .gallery-item {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 160px;
+    height: 180px;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .btn-group button {
+    margin: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item {
+    width: 140px;
+    height: 160px;
+  }
+}
+
+
+
+/* Navigation Buttons with Zoom Animation */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffe600;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #ebff3b;
+  color: #2600ff;
+  transform: translateY(-50%) scale(1.2); /* Zoom effect on hover */
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+                              /* END gallry Full-screen Modal Styling */
+
+                            
+                           
+
+/* Pricing Section Styles */
+.pricing-section {
+  padding: 80px 0;
+  background-color: #02010e;
+}
+
+.pricing-section h1 {
+  margin-bottom: 60px;
+}
+
+/* Package Tab Styles */
+#packageTabs {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between buttons */
+}
+
+#packageTabs .nav-link {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 0 10px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#packageTabs .nav-link:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#packageTabs .nav-link.active {
+  background-color: rgb(117, 253, 90);
+  color: #000;
+  border-color: rgb(117, 253, 90);
+  transform: translateY(-5px);
+}
+
+/* Package Card Styles */
+.package-card {
+  background-color: rgba(15, 15, 25, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.package-header {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.package-header h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.price {
+  color: white;
+}
+
+.price .amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(117, 253, 90);
+}
+
+.price .period {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.package-features {
+  padding: 30px 20px;
+  flex-grow: 1;
+}
+
+.package-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-features li {
+  color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+.package-features li:last-child {
+  border-bottom: none;
+}
+
+.package-features i {
+  margin-right: 10px;
+}
+
+.package-features .bi-check-circle-fill {
+  color: rgb(117, 253, 90);
+}
+
+.package-features .bi-x-circle {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.package-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-btn {
+  transition: all 0.3s ease;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Featured Package Styles */
+.package-card.featured {
+  border-color: rgb(117, 253, 90);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.package-card.featured:hover {
+  transform: scale(1.08) translateY(-10px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(117, 253, 90);
+  color: #000;
+  font-weight: bold;
+  padding: 7px 15px;
+  font-size: 0.8rem;
+  border-bottom-left-radius: 10px;
+}
+
+/* Order Modal Styles */
+.modal-content {
+  background-color: #121212;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#orderForm .form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+#orderForm .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgb(117, 253, 90);
+  box-shadow: 0 0 0 0.25rem rgba(117, 253, 90, 0.25);
+}
+
+#orderForm .input-group-text {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #packageTabs .nav-link {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+  }
+  
+  .package-card {
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #packageTabs {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  #packageTabs .nav-link {
+      margin: 5px 0;
+  }
+  
+  .package-card.featured {
+      transform: scale(1);
+  }
+  
+  .package-card.featured:hover {
+      transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeTrio Atelier</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+   <link rel="icon" href="data:,">
+
+
+
+    <style>
+        body {
+          background:#02010e;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .custom-font {
+         font-family: 'Poppins', sans-serif;
+      }
+      .name-font {
+        font-family: 'Bree Serif', serif;
+      }
+
+
+        
+
+        .nav-link {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .nav-link i, .nav-link span {
+          position: relative;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Zoom effect and color change to white when hovered */
+        .nav-link:hover i, .nav-link:hover span {
+          transform: scale(1.2); /* Zoom in effect */
+          color: #fff; /* Change text and icon color to white */
+        }
+
+        /* Ensure the icon and text color are not white before hover */
+        .nav-link i, .nav-link span {
+          color: inherit; /* Inherit the default color */
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+
+        
+          /* strat now bouton */
+         /* Zoom Effect with Color Change */
+.zoom-button {
+    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.zoom-button:hover {
+    transform: scale(1.1);
+    color: rgb(2, 2, 2)!important; /* Change text color to match warning button */
+}
+
+/* Arrow Animation (Left & Right movement) */
+.arrow-large {
+    display: inline-block;
+    font-size: 1.2em;
+    opacity: 0;
+    animation: moveArrow 3s infinite linear;
+}
+
+/* Left arrow (Move from right to left) */
+.left-arrow {
+    animation-delay: 0s; /* Starts from the beginning */
+    animation-name: moveArrowLeft; /* Animation for left arrow */
+}
+
+/* Right arrow (Move from left to right) */
+.right-arrow {
+    animation-delay: 0s; /* Starts simultaneously with the left arrow */
+    animation-name: moveArrowRight; /* Animation for right arrow */
+}
+
+/* Keyframes for the left arrow moving to the left */
+@keyframes moveArrowLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10px); /* Start more left */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-80px); /* Move more to the left */
+    }
+}
+
+
+/* Keyframes for the right arrow moving to the right */
+@keyframes moveArrowRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-8px); /* Start from the left side */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(30); /* Move towards the center */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(80px); /* Move to the right */
+    }
+}
+
+
+.social-icon:hover {
+  transform: scale(1.1);
+
+}
+
+    </style>
+
+
+</head>
+<body>
+
+<!-- Navbar -->  
+<header>
+  <div class="px-3 py-2 ">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start custom-font">
+      <a href="pages/home.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+        <!-- Your logo image here -->
+        <img src="./assets/image/1 logo.png  " alt="" class="me-2" style="height: 40px;">
+        <!-- Your name -->
+        <span class="fs-4"><span class="text-warning fw-bold">Sajith  </span> Creative Studio</span>
+      </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="pages/home.html" class="nav-link d-flex flex-column align-items-center">
+              <i class="bi bi-house-door fs-3 text-warning"></i> 
+              <span class="text-warning">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/home.html #about" class="nav-link d-flex flex-column align-items-center">
+              <i class="bi bi-info-circle fs-3 text-primary"></i>
+              <span class="text-primary">About</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/home.html #services" class="nav-link d-flex flex-column align-items-center">
+              <i class="bi bi-gear fs-3 text-success"></i>
+              <span class="text-success">Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/home.html #portfolio" class="nav-link d-flex flex-column align-items-center">
+              <i class="bi bi-briefcase fs-3 text-danger"></i>
+              <span class="text-danger">Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/home.html #contact" class="nav-link d-flex flex-column align-items-center">
+              <i class="bi bi-envelope fs-3 text-info"></i>
+              <span class="text-info">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Navbar End -->
+<br>
+<!--  STRAT Heroes -->
+<div class="container col-xxl-8 px-3 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <!-- Image Section -->
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <div class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden" 
+                style="width: 400px; height: 400px;">
+                <img src="assets/image/01.png" class="img-fluid" alt="Bootstrap Themes" loading="lazy" style="padding-bottom: 100px;">
+            </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 class="display-5 fw-bold lh-1 mb-3 name-font " style="color: rgb(117, 253, 90);">Sjith Priyantha</h1>
+            <h4 class="fw-bold custom-font" id="typing">I'm a </h4>
+            <p class="" style="text-align: justify;">
+                We bring your vision to life with stunning websites, innovative graphic designs, and high-quality video edits. Our goal is to elevate your brand with visually striking and impactful creations. With a touch of creativity and precision, we’re here to strengthen your online presence and make your ideas shine!
+            </p>
+
+            <!-- Button Section -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-warning btn-lg px-5 py-2 me-md-2 custom-font zoom-button w-100"
+                onclick="window.location.href='pages/home.html';">
+                  <span class="text-black fw-bold">
+                    <span class="arrow-large left-arrow">&lt;&lt;&lt;</span> Start Now <span class="arrow-large right-arrow">&gt;&gt;&gt;</span>
+                  </span>
+              </button>
+            </div>
+
+            <!-- Social Icons Section (Below the Button) -->
+            <div class="social-icons-container d-flex justify-content-center gap-3 mt-4">
+                <a href="https://www.youtube.com/@SajithCreativeStudio" class="social-icon youtube">
+                  <img src="assets/image/youtube.png" alt="YouTube" width="50" height="50">
+                </a>    
+                <a href="https://www.linkedin.com/in/sajith-priyantha/" class="social-icon linkedin">
+                  <img src="assets/image/linkedin.png" alt="LinkedIn" width="50" height="50">
+                </a>
+                <a href="https://web.facebook.com/SajithCreativeStudio/" class="social-icon facebook">
+                  <img src="assets/image/facebook.png" alt="Facebook" width="50" height="50">
+                </a>
+                <!--<a href="https://www.instagram.com/sajithcreativestudio/" class="social-icon instagram">
+                  <img src="assets/image/instagram.png" alt="Instagram" width="50" height="50">
+                </a>  -->
+                <a href="https://wa.me/94728288450" class="social-icon whatsapp">
+                  <img src="assets/image/whatsapp.png" alt="WhatsApp" width="50" height="50">
+                </a>
+                <!--<a href="#" class="social-icon tiktok">
+                  <img src="assets/image/tiktok.png" alt="TikTok" width="50" height="50">
+                </a> -->
+             </div>
+        </div>
+    </div>
+</div>
+
+
+  <!--  END Heroes -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+ if (document.body.contains(document.getElementById("typing"))) {
+    document.addEventListener("DOMContentLoaded", function () {
+      const textArray = [
+        { text: "Web Designer", color: "#ff02ab" },
+        { text: "Graphic Designer", color: "#00ff37" },
+        { text: "Video Editor", color: "#00eeff" }
+      ];
+      const typingElement = document.getElementById("typing");
+      
+      // Check if typingElement exists
+      if (!typingElement) {
+        console.warn("Element with ID 'typing' not found.");
+        return; // Exit the script if element does not exist
+      }
+      console.log("Typing element found, starting effect.");
+      
+      let textIndex = 0;
+      let charIndex = 0;
+
+      function typeEffect() {
+        if (charIndex < textArray[textIndex].text.length) {
+          typingElement.innerHTML = "I'm a <span style='color: " + textArray[textIndex].color + ";'>" + textArray[textIndex].text.substring(0, charIndex + 1) + "</span>"; 
+          charIndex++;
+          setTimeout(typeEffect, 100); // Speed of typing effect
+        } else {
+          setTimeout(eraseEffect, 1000); // Delay before erasing
+        }
+      }
+
+      function eraseEffect() {
+        if (charIndex > 0) {
+          typingElement.innerHTML = "I'm a <span style='color: " + textArray[textIndex].color + ";'>" + textArray[textIndex].text.substring(0, charIndex - 1) + "</span>"; 
+          charIndex--;
+          setTimeout(eraseEffect, 50); // Speed of erasing effect
+        } else {
+          textIndex = (textIndex + 1) % textArray.length; // Loop to the next text
+          setTimeout(typeEffect, 500); // Delay before typing the next text
+        }
+      }
+
+      typeEffect(); // Start the effect
+    });
+  }
+</script>
+
+</body>
+</html>

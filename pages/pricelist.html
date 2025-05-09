@@ -1,0 +1,500 @@
+<?php include('header.php'); ?>
+
+<div class="main-content">
+    <div id="pricing" class="section pricing-section">
+        <div class="container px-4 py-5">
+            <h1 class="text-center pb-4 border-bottom" style="color: rgb(117, 253, 90);">Our Service Packages</h1>
+            
+            <!-- Package Type Selection Tabs -->
+            <ul class="nav nav-pills mb-5 justify-content-center" id="packageTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active px-4 py-2 m-2 fw-bold" 
+                            id="web-tab" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#web-packages" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="web-packages" 
+                            aria-selected="true">
+                        <i class="fa-solid fa-code me-2"></i>Web Design
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-4 py-2 m-2 fw-bold" 
+                            id="graphic-tab" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#graphic-packages" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="graphic-packages" 
+                            aria-selected="false">
+                        <i class="fa-solid fa-pen-nib me-2"></i>Graphic Design
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-4 py-2 m-2 fw-bold" 
+                            id="video-tab" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#video-packages" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="video-packages" 
+                            aria-selected="false">
+                        <i class="fas fa-video me-2"></i>Video Editing
+                    </button>
+                </li>
+            </ul>
+            
+            <!-- Package Content -->
+            <div class="tab-content" id="packageTabsContent">
+                <!-- Web Design Packages -->
+                <div class="tab-pane fade show active" id="web-packages" role="tabpanel" aria-labelledby="web-tab">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                        <!-- Basic Web Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">Basic Website</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$199</span>
+                                        <span class="text-muted ms-1">/ one-time</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>5 Page Responsive Website</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Mobile Friendly Design</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Contact Form</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Basic SEO Setup</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Social Media Integration</li>
+                                        <li class="text-muted"><i class="bi bi-x-circle-fill text-danger me-2"></i>E-commerce Features</li>
+                                        <li class="text-muted"><i class="bi bi-x-circle-fill text-danger me-2"></i>Custom Animations</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="Basic Website" 
+                                            data-price="199" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Standard Web Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card featured-package">
+                                <div class="popular-badge bg-warning text-center ">MOST POPULAR</div>
+                                <div class="card-header text-center py-3 bg-primary">
+                                    <h4 class="card-title text-white mb-0">Business Website</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$499</span>
+                                        <span class="text-muted ms-1">/ one-time</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>10 Page Responsive Website</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Premium Design & Layout</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Advanced Contact Form</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Complete SEO Setup</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Social Media Integration</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Blog Section</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Google Analytics Setup</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-primary w-100 fw-bold order-button" 
+                                            data-package="Business Website" 
+                                            data-price="499" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Web Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">E-commerce Website</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$999</span>
+                                        <span class="text-muted ms-1">/ one-time</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Full E-commerce Store</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited Products</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Payment Gateway Integration</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom Design & Animations</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Advanced SEO Package</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Inventory Management</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>One Month Free Support</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="E-commerce Website" 
+                                            data-price="999" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Graphic Design Packages -->
+                <div class="tab-pane fade" id="graphic-packages" role="tabpanel" aria-labelledby="graphic-tab">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                        <!-- Basic Graphic Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">Basic Branding</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$99</span>
+                                        <span class="text-muted ms-1">/ package</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Logo Design (2 concepts)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Business Card Design</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Social Media Profile Pictures</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>2 Revisions</li>
+                                        <li class="text-muted"><i class="bi bi-x-circle-fill text-danger me-2"></i>Branding Guidelines</li>
+                                        <li class="text-muted"><i class="bi bi-x-circle-fill text-danger me-2"></i>Marketing Materials</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="Basic Branding" 
+                                            data-price="99" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Standard Graphic Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card featured-package">
+                                <div class="popular-badge">MOST POPULAR</div>
+                                <div class="card-header text-center py-3 bg-primary">
+                                    <h4 class="card-title text-white mb-0">Complete Branding</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$249</span>
+                                        <span class="text-muted ms-1">/ package</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Logo Design (5 concepts)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Business Card & Letterhead</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Social Media Kit (Profile + 3 Banners)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Branding Guidelines</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Email Signature</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>5 Revisions</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-primary w-100 fw-bold order-button" 
+                                            data-package="Complete Branding" 
+                                            data-price="249" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Graphic Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">Premium Marketing</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$499</span>
+                                        <span class="text-muted ms-1">/ package</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Complete Branding Package</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Promotional Materials (Flyer, Brochure)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Social Media Posts (10 Templates)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Banner Ad Designs</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Packaging Design</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited Revisions</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="Premium Marketing" 
+                                            data-price="499" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Editing Packages -->
+                <div class="tab-pane fade" id="video-packages" role="tabpanel" aria-labelledby="video-tab">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                        <!-- Basic Video Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">Basic Video Edit</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$149</span>
+                                        <span class="text-muted ms-1">/ video</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Up to 5 Minutes Video</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Basic Color Correction</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Simple Transitions</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Logo Integration</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Royalty-Free Music</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>2 Revisions</li>
+                                        <li class="text-muted"><i class="bi bi-x-circle-fill text-danger me-2"></i>Custom Animations</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="Basic Video Edit" 
+                                            data-price="149" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Standard Video Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card featured-package">
+                                <div class="popular-badge">MOST POPULAR</div>
+                                <div class="card-header text-center py-3 bg-primary">
+                                    <h4 class="card-title text-white mb-0">Professional Edit</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$299</span>
+                                        <span class="text-muted ms-1">/ video</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Up to 15 Minutes Video</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Advanced Color Grading</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Professional Transitions</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom Intro & Outro</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Motion Graphics</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sound Effects & Mixing</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>5 Revisions</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-primary w-100 fw-bold order-button" 
+                                            data-package="Professional Edit" 
+                                            data-price="299" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Video Package -->
+                        <div class="col">
+                            <div class="card h-100 pricing-card">
+                                <div class="card-header text-center py-3 bg-dark">
+                                    <h4 class="card-title text-white mb-0">Premium Production</h4>
+                                </div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="price-tag text-center my-4">
+                                        <span class="display-5 fw-bold">$599</span>
+                                        <span class="text-muted ms-1">/ video</span>
+                                    </div>
+                                    <ul class="feature-list">
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Up to 30 Minutes Video</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Cinematic Color Grading</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Advanced Visual Effects</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom 3D Animations</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Professional Audio Mastering</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Customized Graphics Package</li>
+                                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited Revisions</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center border-0 pt-0 bg-dark">
+                                    <button class="btn btn-warning w-100 fw-bold order-button" 
+                                            data-package="Premium Production" 
+                                            data-price="599" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#orderModal">
+                                        Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="order-summary p-3 rounded mb-4" style="background-color: rgba(255,255,255,0.1);">
+                            <h5 class="border-bottom pb-2 mb-3" style="color: rgb(117, 253, 90);">Order Summary</h5>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Package:</span>
+                                <span id="summaryPackage">-</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Price:</span>
+                                <span id="summaryPrice">$0</span>
+                            </div>
+                            <div class="mt-4 pt-2 border-top">
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-bold">Total:</span>
+                                    <span class="fw-bold" id="summaryTotal">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form id="orderForm">
+                            <input type="hidden" id="packageName" name="packageName">
+                            <input type="hidden" id="packagePrice" name="packagePrice">
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="requirements" class="form-label">Project Requirements</label>
+                                <textarea class="form-control" id="requirements" name="requirements" rows="4" placeholder="Please describe your project needs..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-warning" id="submitOrder">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Order Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-body p-4 text-center">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                </div>
+                <h5 class="mb-3">Your order has been placed successfully!</h5>
+                <p class="mb-4">We'll contact you within 24 hours to discuss your project details.</p>
+                <button type="button" class="btn btn-warning px-4" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery for handling order modal functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle order button click
+        const orderButtons = document.querySelectorAll('.order-button');
+        orderButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const packageName = this.getAttribute('data-package');
+                const packagePrice = this.getAttribute('data-price');
+                
+                // Set order summary details
+                document.getElementById('summaryPackage').textContent = packageName;
+                document.getElementById('summaryPrice').textContent = '$' + packagePrice;
+                document.getElementById('summaryTotal').textContent = '$' + packagePrice;
+                
+                // Set hidden form values
+                document.getElementById('packageName').value = packageName;
+                document.getElementById('packagePrice').value = packagePrice;
+            });
+        });
+        
+        // Handle submit order button
+        document.getElementById('submitOrder').addEventListener('click', function() {
+            const form = document.getElementById('orderForm');
+            
+            // Check if form is valid
+            if (form.checkValidity()) {
+                // Hide order modal
+                const orderModal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+                orderModal.hide();
+                
+                // Show success modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+                
+                // Reset form
+                form.reset();
+            } else {
+                // Trigger browser's form validation UI
+                form.reportValidity();
+            }
+        });
+        
+        // Add animation to pricing cards
+        const pricingCards = document.querySelectorAll('.pricing-card');
+        pricingCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('pricing-card-hover');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('pricing-card-hover');
+            });
+        });
+    });
+</script>
+
